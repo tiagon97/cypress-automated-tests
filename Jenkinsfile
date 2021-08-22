@@ -17,6 +17,11 @@ pipeline {
 					bat 'npm test'
 				}
 		}
+        stage("Publish allure report"){
+            steps{
+                allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
+            }
+        }
 	
 	}
 }
