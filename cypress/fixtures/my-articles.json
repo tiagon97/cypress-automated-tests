@@ -1,0 +1,21 @@
+{
+  "articles": [
+    {
+      "slug": "my-default-slug",
+      "title": "This title comes from my-articles.json file",
+      "description": "This description comes from my-articles.json file",
+      "body": "This content comes from my-articles.json file",
+      "createdAt": "2021-08-15T17:16:15.790Z",
+      "updatedAt": "2021-08-15T17:16:15.790Z",
+      "tagList": ["Student", "IT", "Technology"],
+      "favorited": false,
+      "favoritesCount": 0,
+      "author": {
+        "username": "rad_woj97",
+        "bio": "Univeristy of lodz student.",
+        "image": "https://picsum.photos/id/1074/200?grayscale"
+      }
+    }
+  ],
+  "articlesCount": 1
+}

@@ -1,0 +1,12 @@
+{
+    "baseUrl": "https://cirosantilli-realworld-next.herokuapp.com/",
+    "env": {
+        "allure": true,
+        "allureAddVideoOnPass": true,
+        "apiUrl": "https://cirosantilli-realworld-next.herokuapp.com/api",
+        "userCredentials": {
+            "userLogin": "radwoj@gmail.com",
+            "userPassword": "Test123@"
+        }
+    }
+}
