@@ -3,28 +3,28 @@
 import { SignInPage } from "./sign-in.page";
 
 class SignUpPage extends SignInPage {
-  getUsernameInput() {
-    return cy.getElementByPlaceholder("Username");
-  }
+    getUsernameInput() {
+        return cy.getElementByPlaceholder("Username");
+    }
 
-  getSignUpButton() {
-    return cy.contains("button", "Sign up");
-  }
+    getSignUpButton() {
+        return cy.contains("button", "Sign up");
+    }
 
-  getPageHeading() {
-    return cy.contains("h1", "Sign Up");
-  }
+    getPageHeading() {
+        return cy.contains("h1", "Sign up");
+    }
 
-  getLinkForAlreadyRegistered() {
-    return cy.contains("a", "Have an account?");
-  }
+    getLinkForAlreadyRegistered() {
+        return cy.contains("a", "Have an account?");
+    }
 
-  signUp(username, email, password) {
-    this.getUsernameInput().type(username);
-    this.getEmailInput().type(email);
-    this.getPasswordInput().type(password);
-    this.getSignUpButton().click();
-  }
+    signUp(username, email, password) {
+        this.getUsernameInput().type(username);
+        this.getEmailInput().type(email);
+        this.getPasswordInput().type(password);
+        this.getSignUpButton().click();
+    }
 }
 
 export const onSignUpPage = new SignUpPage();
