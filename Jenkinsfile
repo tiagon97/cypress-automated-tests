@@ -18,19 +18,20 @@ pipeline {
 				}
 		}
 
+		
 		stage('reports') {
-    steps {
-    script {
-            allure([
-                    includeProperties: false,
-                    jdk: '',
-                    properties: [],
-                    reportBuildPolicy: 'ALWAYS',
-                    results: [[path: 'cypress-pipeline/allure-results']]
-            ])
-    }
-    }
-}
+    		steps {
+    			script {
+            		allure([
+						includeProperties: false,
+						jdk: '',
+						properties: [],
+						reportBuildPolicy: 'ALWAYS',
+						results: [[path: 'cypress-pipeline/allure-results']]
+            		])
+    			}
+    		}
+		}
 	
 	}
 }
