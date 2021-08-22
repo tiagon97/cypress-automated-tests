@@ -1,16 +1,21 @@
 pipeline {
-    agent any
-
-    stages {
-        stage('install dependencies') {
-            steps {
-                sh 'npm i'
-            }
-        }
-       stage('run tests'){
-           steps{
-               sh 'npm test'
-           }
-       }
-    }
+	agent any
+	stages {
+		stage('Clone Git Repo'){
+				steps{
+					git 'https://github.com/tiagon97/cypress-automated-tests.git'
+		    }
+		}
+		stage('Install Dependencies'){
+				steps{
+					bat 'npm install'
+				}
+		}
+		stage('Run Tests'){
+				steps{
+					bat 'npm test'
+				}
+		}
+	
+	}
 }
