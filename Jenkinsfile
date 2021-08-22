@@ -20,7 +20,13 @@ pipeline {
 
 		stage('Publish HTML Report'){
 				steps{
-					publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'allure-report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+					publishHTML (target : [allowMissing: false,
+ 											alwaysLinkToLastBuild: true,
+											keepAll: true,
+											reportDir: 'allure-report',
+											reportFiles: 'index.html',
+											reportName: 'My Reports',
+											reportTitles: 'The Report'])
 				}
 		}
 	
