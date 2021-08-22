@@ -18,19 +18,10 @@ pipeline {
 				}
 		}
 
-		
-		stage('reports') {
-    		steps {
-    			script {
-            		allure([
-						includeProperties: false,
-						jdk: '',
-						properties: [],
-						reportBuildPolicy: 'ALWAYS',
-						results: [[path: 'cypress-pipeline/allure-results']]
-            		])
-    			}
-    		}
+		stage('Publish HTML Report'){
+				steps{
+					publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'cypress-pipeline/allure-report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+				}
 		}
 	
 	}
