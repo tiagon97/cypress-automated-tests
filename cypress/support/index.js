@@ -23,10 +23,3 @@ Cypress.faker = faker;
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-beforeEach(() => {
-  cy.restoreLocalStorage();
-});
-
-afterEach(() => {
-  cy.saveLocalStorage();
-});
