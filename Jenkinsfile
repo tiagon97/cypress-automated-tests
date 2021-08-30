@@ -1,5 +1,9 @@
 pipeline {
 	agent any
+
+	triggers {
+        cron('0 * * * *')
+    }
     
 	stages {
 		stage('Clone Git Repo'){
@@ -18,19 +22,19 @@ pipeline {
 				}
 		}
 
-		stage('reports') {
-    steps {
-    script {
-            allure([
-                    includeProperties: false,
-                    jdk: '',
-                    properties: [],
-                    reportBuildPolicy: 'ALWAYS',
-                    results: [[path: 'allure-results']]
-            ])
-    }
-    }
-}
+// 		stage('Report') {
+//     		steps {
+//     			script {
+//             		allure([
+// 						includeProperties: false,
+// 						jdk: '',
+// 						properties: [],
+// 						reportBuildPolicy: 'ALWAYS',
+// 						results: [[path: 'allure-results']]
+//             ])
+//    		 }
+//     }
+// }
 	
 	}
 }
