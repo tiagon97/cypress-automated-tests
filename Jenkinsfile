@@ -24,21 +24,17 @@ pipeline {
 
 		stage('Report') {
     		steps {
-    			
-            	publishHTML (target : 
-				[allowMissing: false,
- 				alwaysLinkToLastBuild: true,
- 				keepAll: false,
- 				reportDir: 'allure-report',
- 				reportFiles: 'index.html',
- 				reportName: 'My Reports',
- 				reportTitles: 'The Report'])
-   		
+    			script {
+            		allure([
+						includeProperties: false,
+						jdk: '',
+						properties: [],
+						reportBuildPolicy: 'ALWAYS',
+						results: [[path: 'allure-results']]
+            ])
+   		 }
     }
 }
-
-
-
 	
 	}
 }
