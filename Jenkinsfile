@@ -1,6 +1,10 @@
 pipeline {
 	agent any
 
+	options {
+        ansiColor('xterm')
+    }
+
 	triggers {
         cron('0 * * * *')
     }
