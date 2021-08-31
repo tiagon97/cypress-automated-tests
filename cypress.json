@@ -5,7 +5,7 @@
         "allureAddVideoOnPass": true,
         "apiUrl": "https://cirosantilli-realworld-next.herokuapp.com/api",
         "userCredentials": {
-            "userLogin": "radwoj@gmail.com",
+            "userLogin": "testing@test.com",
             "userPassword": "Test123@"
         }
     }
