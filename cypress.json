@@ -1,9 +1,9 @@
 {
-    "baseUrl": "https://cirosantilli-realworld-next.herokuapp.com/",
+    "baseUrl": "http://localhost:3000/",
     "env": {
         "allure": true,
         "allureAddVideoOnPass": true,
-        "apiUrl": "https://cirosantilli-realworld-next.herokuapp.com/api",
+        "apiUrl": "http://localhost:3000/api",
         "userCredentials": {
             "userLogin": "testing@test.com",
             "userPassword": "Test123@"
